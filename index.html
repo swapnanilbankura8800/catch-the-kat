@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>catch the cat</title>
+    <center><h1>HOVER TO CATCH THE CAT</h1></center>
+   
+    
+    <style>
+        
+
+        .parent {
+            
+           background-color: blue;
+           height: 600px;
+           width: 1400px;
+           
+        }
+        
+        .child {
+            
+            transition: transform 1s ease-in;
+            animation: left-to-right 1s ease-in forwards infinite alternate;
+            
+            
+            
+        }
+        .parent:hover  .child{
+            
+            animation-play-state: paused;
+        }
+        @keyframes left-to-right {
+            0% {
+                transform: translateX(0);
+            }
+            15% {
+                transform: translateY(100%);
+            }
+            30% {
+                transform: translateX(100%);
+            }
+            45% {
+                transform: translateX(0%);
+            }
+            60%{
+                transform: translateX(100%) translateY(100%);
+            }
+            75%{
+                transform: translateY(0%);
+            }
+            100%{
+                transform: translateX(100%) translateY(100%) ;
+            }
+        }
+
+
+        
+    </style>
+
+</head>
+<body>
+    <div class="parent">
+        <div class="child"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2OtxVf9Y34eZLGcDWTsI9D_r7IeC6j8SNE4XLXE1t2EmdUvUtcZACYtLzwJ2tWJwwM8Y&usqp=CAU" alt=""></div>
+        
+    </div>
+</body>
+
+
+</html>
+
